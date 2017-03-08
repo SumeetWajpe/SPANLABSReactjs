@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+
+        // 1st Way
+        // Literal Syntax
+
+        var person = {
+            Name: 'Sumeet',
+            Location: 'Mumbai',
+            Age: 30,
+            isMCT:true,
+            Cities: ['Pune', 'Gurgaon', 'Delhi'],
+            Address: {
+                FlatNo: 202,
+                City:'Pune'
+            },
+            GetDetails: function () {
+                console.log(this.Name  + ' lives in ' + this.Address.City)
+            }
+        };
+
+
+        var jsonData = JSON.stringify(person);
+
+        var jsObj = JSON.parse(jsonData);
+
+
+        // Constructor Syntax !
+
+        function Car(name,speed) {
+            this.Name = name || 'i20';
+            this.Speed = speed || 200;
+            this.Accelerate = function () {
+                console.log('VVRROMMM....');
+            }
+        }
+
+        function JamesBondCar() {
+            this.canFly = true;
+            this.canSubmerge = true;
+        }
+        
+        JamesBondCar.prototype = new Car();
+
+        var jbc = new JamesBondCar();
+
+        //  IIFE
+        // Immidiate Invokable Function Expression
+
+        function Add(x,y) {
+            return x + y;
+        }
+
+        // OR 
+
+      var Add =  function (x,y) {
+          return x + y;
+      }
+
+      var Add = (function (x, y) {
+          return x + y;
+      })(20, 30);
+
+      var anotherModule = {};
+      var myModule = (function (anotherMod) {
+
+        anotherMod.Addition =   function Add() {
+
+          }
+
+          function Subtract() {
+              Add();
+          }
+
+          function Product() {
+              Add();
+          }
+
+          return anotherMod;
+
+      })(anotherModule || {});
+
+       
+    </script>
+</head>
+<body>
+
+</body>
+</html>

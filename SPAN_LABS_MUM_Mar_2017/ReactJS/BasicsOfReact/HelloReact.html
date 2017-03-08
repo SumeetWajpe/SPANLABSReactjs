@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+    <script>
+        // 1.  Create Elements -> React.createElement(elementName,anyAttributes,children)
+
+     // var h1Element =  React.createElement('h1', { id: 'myHeader' }, 'Hello React !');
+        var h1Element = React.DOM.h1({ id: 'myHeader' }, 'Hello React using React.DOM !')
+        var h2Element = React.DOM.h2({ id: 'mysubHeader' }, 'Sub Heading !')
+
+        var fragment = [h1Element,h2Element];
+
+        var pElement = React.DOM.p({ id: 'myPara' }, fragment);
+
+        ReactDOM.render(pElement, document.getElementById('content'));
+    </script>
+</body>
+</html>

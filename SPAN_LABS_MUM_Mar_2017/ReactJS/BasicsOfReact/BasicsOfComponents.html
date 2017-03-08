@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" rel="stylesheet" />
+    <style>
+        .Header{
+            border:2px solid red;
+        }
+        .ComponentForm{
+            border:2px solid red;
+            border-radius:10px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+    <script type="text/jsx">
+        // 1. Create a component
+        // 2.Create and instance
+        // 3.Render
+
+
+           var FormComponent = React.createClass({        
+            render:function () {
+                    return <div className="ComponentForm" >
+                                    <form>
+                                  Name :   <input type="text" className="form-control" />
+                         <input type="button" value="Submit" className="btn btn-success" />
+                                </form>
+                                </div>
+            }        
+        }); 
+        var BasicComponent = React.createClass({        
+            render:function () {
+                    return (<div>
+                                    {/* <h1> Hello  with H1 as Component !</h1> */}
+                                        <FormComponent />
+                                        <FormComponent />
+                                </div>);
+            }        
+        });         
+
+        ReactDOM.render(<BasicComponent />, document.getElementById('content'));
+    </script>
+</body>
+</html>

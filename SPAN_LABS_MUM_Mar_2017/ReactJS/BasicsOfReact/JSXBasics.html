@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+    <style>
+        .Header{
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+    <script type="text/jsx">
+
+        var innerContent = <div>
+                                            <h1 className="Header">Hello react ! (JSX)</h1>
+                                            <h2>Sub Heading !</h2>
+                                        </div>
+      
+
+        ReactDOM.render(innerContent, document.getElementById('content'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        'use strict';
+
+        // ES 6
+        //var x = 10;
+
+        //function TestVariableScope() { 
+        //    if (true) {
+        //      let   month = "March";
+        //    }
+        //}
+        //TestVariableScope();
+       
+        //let y = 20;
+        
+        //const PI = 3.14;
+        // PI = 3.1456; // error !
+
+
+        //var person = {
+        //    Name: 'Sumeet',
+        //    Location: 'Mumbai',
+        //    Age: 30,
+        //    isMCT: true,
+        //    Cities: ['Pune', 'Gurgaon', 'Delhi'],
+        //    Address: {
+        //        FlatNo: 202,
+        //        City: 'Pune'
+        //    },
+        //    GetDetails: function () {
+        //        console.log(`${this.Name}   lives in ${this.Address.City}`)
+        //    }
+        //};
+       
+
+        //var longString = `kjdfhkgjfghjfhgjfhg
+        //lsdfdshfhdhf
+        //sldkfdhfdhhf
+        //lksdfkdhfkdf
+        //`
+
+
+        //var cars = ['BMW','Audi'];
+        //var moreCars = ['Honda','Hyundai'];
+
+        //moreCars.push(...cars);  // Spread parameters
+        
+        // Destructuring [Arrays , Objects] 
+
+        //var cars = ['BMW', 'Audi', 'Honda', 'Hyundai'];
+
+        //var x, y,z;
+
+        //[x,y,...z] = cars; // rest parameters
+        
+        var Name, Age,City;
+        var anotherPer = {Name:'',Age:0};
+        var person = {
+            Name: 'Sumeet',
+            Location: 'Mumbai',
+            Age: 30,
+            isMCT: true
+        };
+
+        ({Name,Age} = person);
+
+
+
+    </script>   
+</head>
+<body>
+
+</body>
+</html>
